@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+   background:linear-gradient(to left ,#31470fdb,#d7d7b7);
+}
+.header_ {
+    height: 100px;
+    background: #152c05cc;
+    padding: 30px;
+    text-align: center;
+    color: rgba(233, 248, 172, 0.616);
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 150px;
+}
+.nav {
+    text-align: center;
+    padding: 15px;
+    background: #20390dad;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.nav a:hover {
+    color: #f4d961;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    min-height:500px;
+    margin-left: 65px;
+    margin-top: 50px;
+}
+.box {
+    color:rgba(10, 10, 10, 0.925);
+    height: 400px;
+    width:300px;
+    padding:5px;
+    text-align:start;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background-color: #e1f0a144;
+}
+.product1 {
+    height: 50%;
+    width:100%;
+}
+a.test{
+    height:60px;
+    width:100%;
+    font-size: 15px;
+    font-weight: 100;
+    padding-left: 5px;
+    color: black;
+    text-decoration: none;
+}
+img{
+    height: 330px;
+    width: 290px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    align-items: center;
+}
+
+.box:hover { 
+    transform: scale(1.05);
+    background-size: 100% 100%;
+    color:white;
+    background-color: rgba(39, 56, 34, 0.703);
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+.product1{
+    background-size: 100% 100%;
+}
+a.test:hover{
+    color: rgb(243, 255, 138);
+    text-decoration: underline;
+}
+
+.menu-icon { 
+    display: block; 
+    font-size: 24px; 
+    cursor: pointer; 
+} 
+ 
+#menu-toggle { 
+    display: none; 
+} 
+
+
+@media (max-width: 1024px) { /* Tablets */
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+    .box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        justify-content: center; /* Center content vertically */
+        text-align: center;
+    }
+    .box img {
+        display: block;
+        height: 300px; /* Adjust height */
+        width: auto; /* Maintain aspect ratio */
+        max-width: 100%; /* Prevent overflow */
+        margin: 0 auto; /* Ensure centering */
+    }
+
+    
+}
+
+
+
+@media (max-width: 480px) { /* Phones */
+    .container {
+        grid-template-columns: 1fr; /* One box per row */
+        padding: 10px;
+        justify-content: center;
+        padding-top: 150px;
+    }
+    .box {
+        width: 90%; 
+        max-width: 350px; 
+        margin:  auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        text-align: center;
+        margin-right: 100px;
+    }
+    .box img {
+        height: 350px; /* Increased size */
+        width: 350px;
+        max-width: 100%; /* Prevents overflow */
+        object-fit: cover;
+    }
+    .box a.test {
+        font-size: 16px;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    .price {
+        font-size: 18px;
+    }
+    .header_ {
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        height: auto; /* Adjust height dynamically */
+        position: fixed; /* Keeps header fixed */
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: #152c05cc; /* Ensures visibility */
+    }
+    .nav {
+        padding: 10px;
+        text-align: center;
+        background: #20390dad;
+        position: fixed; 
+        top: 90px;  
+        width: 100%;
+        z-index: 999;
+
+        overflow: hidden;
+        font-family: Arial;
+    }
+
+    .nav a {
+        font-size: 16px;
+        margin: 0 10px;
+        display: inline-block;
+        padding: 5px;
+    }
+
+    .menu-icon { 
+        display: block; 
+    } 
+     
+    #menu-toggle:checked + .menu-icon + .nav-links { 
+        display: flex; 
+    } 
+
+}
